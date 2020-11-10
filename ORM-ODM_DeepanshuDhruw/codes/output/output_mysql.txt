@@ -1,0 +1,17 @@
+mysql> use mydb
+Database changed
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_mydb |
++----------------+
+| Users          |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM Users;
++----------+----------------+
+| username | password       |
++----------+----------------+
+| john-doe | oomygooturulob |
++----------+----------------+
+1 row in set (0.00 sec)

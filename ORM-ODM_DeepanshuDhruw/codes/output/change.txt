@@ -1,0 +1,1 @@
+"INSERT INTO Users (username, password, imposter) VALUES ('john-doe', 'oomygooturulob', 'imposter')"

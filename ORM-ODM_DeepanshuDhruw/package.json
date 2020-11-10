@@ -1,0 +1,17 @@
+{
+  "name": "orm-odm_deepanshudhruw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.13",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.3.5"
+  }
+}
