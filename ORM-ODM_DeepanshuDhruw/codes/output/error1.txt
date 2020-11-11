@@ -1,0 +1,8 @@
+{
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'imposter' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "INSERT INTO Users (username, password, imposter) VALUES ('john-doe', 'hahalol', 'imposter')"
+}

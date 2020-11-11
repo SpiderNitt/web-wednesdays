@@ -1,0 +1,13 @@
+> use mydb
+switched to db mydb
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("5faa6ee4e66d8823b473d392"),
+        "name" : "John",
+        "password" : "helloworld"
+}
+{
+        "_id" : ObjectId("5faa6ee4e66d8823b473d393"),
+        "whatever" : "doe",
+        "password" : "okok"
+}
