@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+
+  <body style="text-align: center; font-size: large; background-color: bisque;">
+    <h1>TODAY'S WEATHER</h1>
+    <div class="message">
+        Press <strong> Ctrl + W (or) File->Enter city </strong> to open a new window to enter input.
+    </div>
+    <div class="info" style="margin: 10px 10px;">
+      <div class="city"><span id="city-name"> </span></div>
+      <div class="city"><span id="city-weather"> </span></div>
+      <div class="city"><span id="city-temp"> </span></div>
+    </div>
+  </body>
+  <script>
+    const {ipcRenderer} = require("electron");
+
+    //Receives the data from main process
+    ipcRenderer.on("city:find", (e, city) => {
+      fetchData(city);
+    });
+
+    //Function to fetch data from API
+    function fetchData(city) {
+      fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.API_KEY}&units=metric`
+      )
+        .then(function (weather) {
+          return weather.json();
+        })
+        .then(displayWeather);
+    }
+
+    //Function to display the data
+    function displayWeather(weather) {
+      document.getElementById("city-name").innerHTML =
+        `<strong> City:  </strong> ${weather.name}, ${weather.sys.country}`;
+      document.getElementById("city-weather").innerHTML =
+        `<strong> Weather:  </strong> ${weather.weather[0].main}`;
+      document.getElementById("city-temp").innerHTML =
+        `<strong> Temperature:  </strong> ${Math.ceil(weather.main.temp)} °C`;
+    }
+  </script>
+</html>
