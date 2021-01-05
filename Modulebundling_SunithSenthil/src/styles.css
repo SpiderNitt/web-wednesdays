@@ -1,0 +1,14 @@
+body{
+    background-color: blue;
+    margin:0;
+    padding: 0;
+    text-align:center;
+    padding-top: 40px;
+}
+#btn{
+    background: black;
+    color: white;
+}
+#data{
+    font-size: 40px;
+}
