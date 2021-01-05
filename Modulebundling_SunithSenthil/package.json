@@ -1,0 +1,27 @@
+{
+  "name": "practice1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "config1": "webpack --config webpack.config1.js --mode production",
+    "config2": "webpack --config webpack.config2.js --mode development",
+    "config3": "webpack --config webpack.config3.js --mode development",
+    "config1d": "webpack serve --config webpack.config1d.js",
+    "configf": "webpack serve --config webpack.configf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
