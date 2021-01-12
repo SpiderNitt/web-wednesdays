@@ -1,0 +1,4 @@
+#!/bin/bash
+#<?php 
+echo "Hello world \n This is a new line \n in php not in bash \n"
+#?>
